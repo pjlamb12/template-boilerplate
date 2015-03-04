@@ -80,6 +80,85 @@ textarea {
 	resize: vertical;
 }
 
+/*
+ * Default link changes
+ */
+
+a {
+	transition: all .25s ease;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+/*
+ * Vertical align trick
+ * If issues pop up, put a font-size of 0 on the vertical-container div
+ * Make sure the height and width are set to auto for vertical-center and vertical-container, and no padding
+ */
+
+.vertical-container:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.vertical-center {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* ==========================================================================
+   Font Styles
+   ========================================================================== */
+.italic {
+	font-style: italic;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+
+/* ==========================================================================
+   Columns Set Up
+   ========================================================================== */
+.column {
+	float: left;
+}
+.column.one-half {
+	width: 50%;
+}
+.column.two-thirds {
+	width: 66.666666667%;
+}
+.column.one-third {
+	width: 66.333333333%;
+}
+.column.one-fourth {
+	width: 25%;
+}
+.column.three-fourths {
+	width: 75%;
+}
+
+/* ==========================================================================
+   Inline Menu Styles
+   ========================================================================== */
+.inline-menu,
+.inline-menu li {
+	display: inline-block;
+}
+.inline-menu li {
+	margin-left: 15px;
+}
+.inline-menu li:first-child {
+	margin-left: 0;
+}
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -187,7 +266,9 @@ textarea {
 	clear: both;
 }
 
-.hide-on-browser {
+.hide-on-browser,
+.show-on-mobile,
+.show-on-phone {
 	display: none;
 }
 
@@ -209,12 +290,18 @@ textarea {
 	.hide-on-mobile {
 		display: none !important;
 	}
+	.show-on-mobile {
+		display: block !important;
+	}
 }
 
 /* Phone Portrait Styles */
 @media only screen and (max-width: 480px) {
 	.hide-on-phone {
 		display: none !important;
+	}
+	.show-on-phone {
+		display: block !important;
 	}
 }
 
