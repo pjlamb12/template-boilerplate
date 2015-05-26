@@ -4,3 +4,4 @@ public/css/main.css
 *.css.map
 public/css/sprites.css
 public/images/sprite.png
+public/scss/bourbon/
