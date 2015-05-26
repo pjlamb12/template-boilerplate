@@ -1,4 +1,6 @@
 .sass-cache/
 node_modules/
-css/main.css
+public/css/main.css
 *.css.map
+public/css/sprites.css
+public/images/sprite.png

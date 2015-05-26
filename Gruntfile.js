@@ -6,10 +6,17 @@ module.exports = function(grunt) {
 				options: {}
 			},
 		},
+		sprite: {
+			all: {
+				src: 'public/images/sprites-ind/*.png',
+				dest: 'public/images/sprite.png',
+				destCss: 'public/css/sprites.css'
+			}
+		},
 		sass: {
 			dist: {
 				files: {
-					'css/main.css' : 'scss/main.scss'
+					'public/css/main.css' : 'public/scss/main.scss'
 				}
 			}
 		},
@@ -17,21 +24,25 @@ module.exports = function(grunt) {
 			options: {
 				livereload: true,
 			},
+			sprite: {
+				files: ['public/images/sprites-ind/*.png'],
+				tasks: ['sprite']
+			},
 			php: {
 				files: ['**/*.php']
 			},
 			js: {
-				files: ['js/**/*.js'],
+				files: ['public/js/**/*.js'],
 			},
 			sass: {
 				options: {
 					livereload: false
 				},
-				files: ['scss/**/*.scss'],
+				files: ['public/scss/**/*.scss'],
 				tasks: ['sass']
 			},
 			css: {
-				files: ['css/main.css'],
+				files: ['public/css/main.css'],
 				tasks: []
 			}
 		}
@@ -39,6 +50,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['sass']);
-	grunt.registerTask('local', ['sass','watch']);
+	grunt.loadNpmTasks('grunt-spritesmith');
+	grunt.registerTask('default', ['sass', 'sprite']);
+	grunt.registerTask('local', ['sass', 'sprite','watch']);
 }
