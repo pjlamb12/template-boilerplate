@@ -38,6 +38,18 @@
 		&.tablet-three-fourths {
 			width: 75%;
 		}
+		&.tablet-one-fifth {
+			width: 20%;
+		}
+		&.tablet-two-fifths {
+			width: 40%;
+		}
+		&.tablet-three-fifths {
+			width: 60%;
+		}
+		&.tablet-four-fifths {
+			width: 80%;
+		}
 	}
 }
 
@@ -67,6 +79,18 @@
 		}
 		&.phone-three-fourths {
 			width: 75%;
+		}
+		&.phone-one-fifth {
+			width: 20%;
+		}
+		&.phone-two-fifths {
+			width: 40%;
+		}
+		&.phone-three-fifths {
+			width: 60%;
+		}
+		&.phone-four-fifths {
+			width: 80%;
 		}
 	}
 }
