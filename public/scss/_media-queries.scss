@@ -19,6 +19,26 @@
 	.show-on-mobile {
 		display: block !important;
 	}
+	.column {
+		&.tablet-full {
+			width: 100%;
+		}
+		&.tablet-one-half {
+			width: 50%;
+		}
+		&.tablet-two-thirds {
+			width: 66.666666667%;
+		}
+		&.tablet-one-third {
+			width: 66.333333333%;
+		}
+		&.tablet-one-fourth {
+			width: 25%;
+		}
+		&.tablet-three-fourths {
+			width: 75%;
+		}
+	}
 }
 
 /* Phone Portrait Styles */
@@ -28,6 +48,26 @@
 	}
 	.show-on-phone {
 		display: block !important;
+	}
+	.column {
+		&.phone-full {
+			width: 100%;
+		}
+		&.phone-one-half {
+			width: 50%;
+		}
+		&.phone-two-thirds {
+			width: 66.666666667%;
+		}
+		&.phone-one-third {
+			width: 66.333333333%;
+		}
+		&.phone-one-fourth {
+			width: 25%;
+		}
+		&.phone-three-fourths {
+			width: 75%;
+		}
 	}
 }
 
